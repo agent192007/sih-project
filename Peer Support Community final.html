@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Unwind</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#7C3AED",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#1E293B",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#293548",
+                        "text-light": "#1E293B",
+                        "text-dark": "#F8FAFC",
+                        "subtext-light": "#64748B",
+                        "subtext-dark": "#94A3B8",
+                        "border-light": "#E2E8F0",
+                        "border-dark": "#334155",
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'DEFAULT': '0.5rem',
+                        'lg': '0.75rem',
+                        'xl': '1rem'
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+    <div class="container mx-auto px-4 py-8">
+
+        <header class="fixed top-0 left-0 w-full bg-background-light dark:bg-background-dark z-50 shadow-md">
+            <div class="flex justify-between items-center px-6 py-4">
+                <!-- Left Side: Logo + Title -->
+                <div class="flex items-center space-x-2">
+                    <img src="assets/logo.png" alt="Unwind Logo" class="w-10 h-10 object-contain" />
+                    <h1 class="text-xl font-bold text-text-light dark:text-text-dark">Unwind</h1>
+                </div>
+
+                <!-- Right Side: Navigation Buttons -->
+                <nav class="flex space-x-6 items-center">
+                    <a href="home final.html">
+                        <button
+                            class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Home</button>
+                    </a>
+                    <a href="Dashboard final.html">
+                        <button
+                            class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Dashboard</button>
+                    </a>
+                    <a href="Peer Support Community final.html">
+                        <button
+                            class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Peer
+                            Support</button>
+                    </a>
+                    <a href="Chatbot final.html">
+                        <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">AI
+                            Chatbot</button>
+                    </a>
+                    <button class="flex items-center justify-center h-10 text-sm font-medium hover:text-primary">
+                        <span class="material-icons text-4xl">account_circle</span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <div class="pt-10 p-8"></div>
+
+        <h1 class="text-3xl font-bold">Peer Support Community</h1>
+        <p class="text-subtext-light dark:text-subtext-dark mt-1">A safe space for students to connect, share, and
+            support each other</p>
+        <div class="pt-5"></div>
+
+        <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
+            <div class="relative w-full md:w-1/2">
+                <span
+                    class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-subtext-light dark:text-subtext-dark">search</span>
+                <input
+                    class="w-full pl-10 pr-4 py-2 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark rounded-lg focus:ring-primary focus:border-primary"
+                    placeholder="Search posts by keyword..." type="text" />
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto">
+                <div class="relative w-full md:w-auto">
+                    <button
+                        class="flex items-center justify-between w-full px-4 py-2 border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark rounded-lg">
+                        <span class="text-subtext-light dark:text-subtext-dark">All Topics</span>
+                        <span class="material-icons text-subtext-light dark:text-subtext-dark">expand_more</span>
+                    </button>
+                </div>
+                <button
+                    class="flex items-center gap-2 bg-primary text-white font-semibold px-4 py-2 rounded-lg whitespace-nowrap">
+                    <span class="material-icons">add</span>
+                    Request Peer Support
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl flex items-center gap-4">
+                <div class="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full">
+                    <span class="material-icons text-blue-500 dark:text-blue-400 text-3xl">groups</span>
+                </div>
+                <div>
+                    <p class="text-subtext-light dark:text-subtext-dark">Active Members</p>
+                    <p class="text-2xl font-bold">2,847</p>
+                </div>
+            </div>
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl flex items-center gap-4">
+                <div class="bg-green-100 dark:bg-green-900/50 p-3 rounded-full">
+                    <span class="material-icons text-green-500 dark:text-green-400 text-3xl">volunteer_activism</span>
+                </div>
+                <div>
+                    <p class="text-subtext-light dark:text-subtext-dark">Support Given</p>
+                    <p class="text-2xl font-bold">12,493</p>
+                </div>
+            </div>
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl flex items-center gap-4">
+                <div class="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-full">
+                    <span class="material-icons text-purple-500 dark:text-purple-400 text-3xl">forum</span>
+                </div>
+                <div>
+                    <p class="text-subtext-light dark:text-subtext-dark">Conversations</p>
+                    <p class="text-2xl font-bold">4,892</p>
+                </div>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-lg mr-4">
+                        AP
+                    </div>
+                    <div>
+                        <div class="flex items-center">
+                            <p class="font-semibold">Anonymous Peer</p>
+                            <span
+                                class="ml-2 bg-gray-200 dark:bg-gray-600 text-xs font-medium text-subtext-light dark:text-subtext-dark px-2 py-0.5 rounded-full">Anonymous</span>
+                        </div>
+                        <p class="text-sm text-subtext-light dark:text-subtext-dark">2 hours ago</p>
+                    </div>
+                    <span
+                        class="ml-auto inline-block bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400 text-xs font-medium px-2.5 py-1 rounded-full">anxiety</span>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Struggling with exam anxiety</h3>
+                <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    Finals are coming up and I'm feeling overwhelmed. Has anyone found effective ways to manage test
+                    anxiety? I've tried breathing exercises but could use more strategies.
+                </p>
+                <div
+                    class="flex justify-between items-center border-t border-border-light dark:border-border-dark pt-4">
+                    <div class="flex items-center gap-4 text-subtext-light dark:text-subtext-dark text-sm">
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">thumb_up_off_alt</span> 24 Support</span>
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">chat_bubble_outline</span> 8 Replies</span>
+                    </div>
+                    <button
+                        class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-text-light dark:text-text-dark font-semibold px-4 py-2 rounded-lg text-sm">Reply</button>
+                </div>
+            </div>
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-bold text-lg mr-4">
+                        AM
+                    </div>
+                    <div>
+                        <p class="font-semibold">Alex M.</p>
+                        <p class="text-sm text-subtext-light dark:text-subtext-dark">4 hours ago</p>
+                    </div>
+                    <span
+                        class="ml-auto inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 text-xs font-medium px-2.5 py-1 rounded-full">sleep</span>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Sleep schedule completely messed up</h3>
+                <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    I've been staying up until 3am every night and can barely function during the day. How do you reset
+                    your sleep cycle when everything feels chaotic?
+                </p>
+                <div
+                    class="flex justify-between items-center border-t border-border-light dark:border-border-dark pt-4">
+                    <div class="flex items-center gap-4 text-subtext-light dark:text-subtext-dark text-sm">
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">thumb_up_off_alt</span> 18 Support</span>
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">chat_bubble_outline</span> 12 Replies</span>
+                    </div>
+                    <button
+                        class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-text-light dark:text-text-dark font-semibold px-4 py-2 rounded-lg text-sm">Reply</button>
+                </div>
+            </div>
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-lg mr-4">
+                        AP
+                    </div>
+                    <div>
+                        <div class="flex items-center">
+                            <p class="font-semibold">Anonymous Peer</p>
+                            <span
+                                class="ml-2 bg-gray-200 dark:bg-gray-600 text-xs font-medium text-subtext-light dark:text-subtext-dark px-2 py-0.5 rounded-full">Anonymous</span>
+                        </div>
+                        <p class="text-sm text-subtext-light dark:text-subtext-dark">1 day ago</p>
+                    </div>
+                    <span
+                        class="ml-auto inline-block bg-teal-100 dark:bg-teal-900/50 text-teal-600 dark:text-teal-400 text-xs font-medium px-2.5 py-1 rounded-full">social</span>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Feeling isolated and lonely on campus</h3>
+                <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    I'm a sophomore but still feel like I haven't found my community. It's hard to make genuine
+                    connections. Anyone else experience this?
+                </p>
+                <div
+                    class="flex justify-between items-center border-t border-border-light dark:border-border-dark pt-4">
+                    <div class="flex items-center gap-4 text-subtext-light dark:text-subtext-dark text-sm">
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">thumb_up_off_alt</span> 31 Support</span>
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">chat_bubble_outline</span> 15 Replies</span>
+                    </div>
+                    <button
+                        class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-text-light dark:text-text-dark font-semibold px-4 py-2 rounded-lg text-sm">Reply</button>
+                </div>
+            </div>
+            <div class="bg-card-light dark:bg-card-dark p-6 rounded-xl">
+                <div class="flex items-center mb-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-lg mr-4">
+                        JK
+                    </div>
+                    <div>
+                        <p class="font-semibold">Jordan K.</p>
+                        <p class="text-sm text-subtext-light dark:text-subtext-dark">1 day ago</p>
+                    </div>
+                    <span
+                        class="ml-auto inline-block bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 text-xs font-medium px-2.5 py-1 rounded-full">stress</span>
+                </div>
+                <h3 class="font-semibold text-lg mb-2">Burnout from juggling work and studies</h3>
+                <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    Working 20 hours a week while taking 15 credits is taking its toll. How do you maintain balance
+                    without sacrificing everything?
+                </p>
+                <div
+                    class="flex justify-between items-center border-t border-border-light dark:border-border-dark pt-4">
+                    <div class="flex items-center gap-4 text-subtext-light dark:text-subtext-dark text-sm">
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">thumb_up_off_alt</span> 22 Support</span>
+                        <span class="flex items-center gap-1"><span
+                                class="material-icons text-base">chat_bubble_outline</span> 6 Replies</span>
+                    </div>
+                    <button
+                        class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-text-light dark:text-text-dark font-semibold px-4 py-2 rounded-lg text-sm">Reply</button>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 bg-teal-500 dark:bg-teal-600 text-white p-8 rounded-xl text-center">
+            <h2 class="text-2xl font-bold mb-2">Need Immediate Support?</h2>
+            <p class="mb-6">If you're experiencing a mental health crisis, please reach out for immediate help.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-teal-600 font-semibold px-6 py-3 rounded-lg">Campus Counseling: (555)
+                    123-4567</button>
+                <button class="bg-white/20 hover:bg-white/30 text-white font-semibold px-6 py-3 rounded-lg">Crisis Text
+                    Line: Text HOME to 741741</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

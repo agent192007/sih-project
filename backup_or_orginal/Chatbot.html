@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>MindfulBot</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        @keyframes subtle-bg {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .animated-bg {
+            background: linear-gradient(-45deg, #e0f2f1, #d4e8f6, #f3e5f5, #e0f2f1);
+            background-size: 400% 400%;
+            animation: subtle-bg 20s ease infinite;
+        }
+        @keyframes shape-one {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(40px, -20px) rotate(45deg);
+            }
+        }
+        @keyframes shape-two {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(-30px, 30px) rotate(-60deg);
+            }
+        }
+        .shape-one {
+            animation: shape-one 30s infinite alternate ease-in-out;
+        }
+        .shape-two {
+            animation: shape-two 25s infinite alternate ease-in-out;
+        }
+        @keyframes bubble-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .chat-bubble {
+            animation: bubble-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        @keyframes avatar-pulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+        }
+        .avatar-pulse {
+            animation: avatar-pulse 6s infinite ease-in-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "calm-blue": "#A4C8E2",
+                        "soft-green": "#A7D7C5",
+                        "muted-pastel": "#F7D9C4",
+                        "soft-neutral": "#F3F4F6",
+                        "base": "#FFFFFF",
+                        "surface": "rgba(255, 255, 255, 0.5)",
+                        "surface-dark": "rgba(42, 51, 66, 0.5)",
+                        "text-primary": "#2C3E50",
+                        "text-secondary": "#7F8C8D",
+                        "accent": "#5C9EAD",
+                        "accent-dark": "#76D7C4",
+                    },
+                    fontFamily: {
+                        "sans": ["Poppins", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05)',
+                        'medium': '0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -4px rgba(0, 0, 0, 0.07)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="font-sans text-text-primary antialiased">
+    <div class="fixed top-0 left-0 w-full h-full -z-10 animated-bg">
+        
+        <div
+            class="absolute top-1/4 left-1/4 w-72 h-72 bg-calm-blue/30 rounded-full filter blur-2xl opacity-70 shape-one">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-soft-green/30 rounded-full filter blur-2xl opacity-70 shape-two">
+        </div>
+    </div>
+    <div class="flex h-screen">
+        <aside
+            class="w-96 flex-shrink-0 bg-surface/50 backdrop-blur-xl flex flex-col items-center justify-center p-10 border-r border-white/30">
+            <div class="flex flex-col items-center text-center">
+                <div class="w-48 h-48 mb-6 relative avatar-pulse">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-calm-blue to-soft-green rounded-full opacity-50 blur-lg">
+                    </div>
+                    <div class="relative w-full h-full flex items-center justify-center">
+                        <svg class="w-32 h-32 text-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="avatarGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#A4C8E2"></stop>
+                                    <stop offset="100%" style="stop-color:#A7D7C5"></stop>
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M50,0 C77.6,0 100,22.4 100,50 C100,77.6 77.6,100 50,100 C22.4,100 0,77.6 0,50 C0,22.4 22.4,0 50,0 Z"
+                                fill="url(#avatarGradient)" transform="rotate(-15 50 50)">
+                                <animateTransform attributeName="transform" dur="25s" from="0 50 50"
+                                    repeatCount="indefinite" to="360 50 50" type="rotate"></animateTransform>
+                            </path>
+                            <path
+                                d="M50,10 C72.1,10 90,27.9 90,50 C90,72.1 72.1,90 50,90 C27.9,90 10,72.1 10,50 C10,27.9 27.9,10 50,10 Z"
+                                fill="rgba(255,255,255,0.7)">
+                                <animate attributeName="d" dur="15s" repeatCount="indefinite"
+                                    values="M50,10 C72.1,10 90,27.9 90,50 C90,72.1 72.1,90 50,90 C27.9,90 10,72.1 10,50 C10,27.9 27.9,10 50,10 Z;
+                                     M50,15 C69.3,15 85,30.7 85,50 C85,69.3 69.3,85 50,85 C30.7,85 15,69.3 15,50 C15,30.7 30.7,15 50,15 Z;
+                                     M50,10 C72.1,10 90,27.9 90,50 C90,72.1 72.1,90 50,90 C27.9,90 10,72.1 10,50 C10,27.9 27.9,10 50,10 Z"></animate>
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="font-serif text-4xl text-text-primary">MindfulBot</h1>
+                <p class="text-text-secondary mt-3 text-lg font-light">Your calm space for reflection.</p>
+            </div>
+        </aside>
+        <main class="flex-1 flex flex-col bg-black/5">
+            <div class="flex-1 overflow-y-auto p-8 space-y-6">
+                <div class="flex items-start gap-4 chat-bubble">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-calm-blue to-soft-green flex-shrink-0">
+                    </div>
+                    <div class="flex flex-col items-start max-w-lg">
+                        <div
+                            class="bg-surface backdrop-blur-md text-text-primary px-5 py-3 rounded-2xl rounded-tl-sm shadow-soft">
+                            <p>Hi there! I'm MindfulBot, your AI companion for mental wellness. How can I help you
+                                today?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 justify-end chat-bubble" style="animation-delay: 0.2s;">
+                    <div class="flex flex-col items-end max-w-lg">
+                        <div
+                            class="bg-accent/80 backdrop-blur-md text-white px-5 py-3 rounded-2xl rounded-br-sm shadow-medium">
+                            <p>I'm feeling a bit overwhelmed with schoolwork.</p>
+                        </div>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-muted-pastel flex-shrink-0"></div>
+                </div>
+                <div class="flex items-start gap-4 chat-bubble" style="animation-delay: 0.4s;">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-calm-blue to-soft-green flex-shrink-0">
+                    </div>
+                    <div class="flex flex-col items-start max-w-lg">
+                        <div
+                            class="bg-surface backdrop-blur-md text-text-primary px-5 py-3 rounded-2xl rounded-tl-sm shadow-soft">
+                            <p>I understand. School can be stressful. Let's explore some strategies to manage that.
+                                Would you like to try a quick relaxation exercise or discuss time management techniques?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 justify-end chat-bubble" style="animation-delay: 0.6s;">
+                    <div class="flex flex-col items-end max-w-lg">
+                        <div
+                            class="bg-accent/80 backdrop-blur-md text-white px-5 py-3 rounded-2xl rounded-br-sm shadow-medium">
+                            <p>A relaxation exercise sounds good.</p>
+                        </div>
+                    </div>
+                    <div class="w-10 h-10 rounded-full bg-muted-pastel flex-shrink-0"></div>
+                </div>
+                <div class="flex items-start gap-4 chat-bubble" style="animation-delay: 0.8s;">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-calm-blue to-soft-green flex-shrink-0">
+                    </div>
+                    <div class="flex flex-col items-start max-w-lg">
+                        <div
+                            class="bg-surface backdrop-blur-md text-text-primary px-5 py-3 rounded-2xl rounded-tl-sm shadow-soft">
+                            <p>Great choice. Let's start with a simple deep breathing exercise. Find a comfortable
+                                position, close your eyes, and take a slow, deep breath in through your nose, and then
+                                gently exhale through your mouth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 chat-bubble" style="animation-delay: 1.0s;">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-calm-blue to-soft-green flex-shrink-0">
+                    </div>
+                    <div class="flex flex-col items-start max-w-lg">
+                        <div
+                            class="bg-surface backdrop-blur-md text-text-primary px-5 py-3 rounded-2xl rounded-tl-sm shadow-soft">
+                            <p>As you breathe, try to let go of any tension you're holding. Just focus on the sensation
+                                of your breath. Let's do this a few more times together.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 bg-surface/50 backdrop-blur-xl border-t border-white/20">
+                <div class="flex items-center gap-4">
+                    <input
+                        class="w-full flex-1 bg-white/70 border-2 border-slate-200/50 focus:ring-2 focus:ring-accent/50 focus:border-accent/80 rounded-xl px-5 py-3 placeholder:text-text-secondary transition-all duration-300 shadow-soft focus:shadow-medium"
+                        placeholder="Type your message..." type="text" />
+                    <button
+                        class="p-3 rounded-xl text-text-secondary hover:bg-white/90 hover:text-accent transition-colors duration-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">
+                            </path>
+                            <path
+                                d="M14.828 14.828a3.988 3.988 0 0 1-5.656 0 1 1 0 1 0-1.414 1.414 5.988 5.988 0 0 0 8.484 0 1 1 0 0 0-1.414-1.414zM9 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm6 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button
+                        class="bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-opacity-90 shadow-medium hover:shadow-lg transform hover:-translate-y-px transition-all duration-300">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

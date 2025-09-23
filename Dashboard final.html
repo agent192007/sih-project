@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Unwind</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style type="text/tailwindcss">
+    :root {
+      --chart-1: #34D399;
+      --chart-2: #FBBF24;
+      --chart-3: #F87171;
+      --chart-4: #60A5FA;
+      --chart-5: #A78BFA;
+    }
+    .group:hover .tooltip {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: "#4F46E5",
+              light: "#6366F1",
+              dark: "#4338CA",
+            },
+            "background-light": "#F9FAFB",
+            "background-dark": "#111827",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1F2937",
+            "text-light": "#1F2937",
+            "text-dark": "#F9FAFB",
+            "subtext-light": "#6B7280",
+            "subtext-dark": "#9CA3AF",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
+  <div class="p-8">
+    <header class="fixed top-0 left-0 w-full bg-background-light dark:bg-background-dark z-50 shadow-md">
+      <div class="flex justify-between items-center px-6 py-4">
+
+        <div class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="Unwind Logo" class="w-10 h-10 object-contain" />
+          <h1 class="text-xl font-bold text-text-light dark:text-text-dark">Unwind</h1>
+        </div>
+
+        <nav class="flex space-x-6 items-center">
+          <a href="home final.html">
+            <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Home</button>
+          </a>
+          <a href="Dashboard final.html">
+            <button
+              class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Dashboard</button>
+          </a>
+          <a href="Peer Support Community final.html">
+            <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Peer
+              Support</button>
+          </a>
+          <a href="Chatbot final.html">
+            <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">AI
+              Chatbot</button>
+          </a>
+          <button class="flex items-center justify-center h-10 text-sm font-medium hover:text-primary">
+            <span class="material-icons text-4xl">account_circle</span>
+          </button>
+        </nav>
+
+      </div>
+    </header>
+
+    <div class="pt-20 p-8">
+
+      <h1 class="text-3xl font-bold text-text-light dark:text-text-dark">Your Wellness Dashboard</h1>
+      <p class="text-subtext-light dark:text-subtext-dark mt-1">Track your mental health journey and celebrate your
+        progress</p>
+      <div class="pt-4"></div>
+
+      <main class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="bg-teal-500 text-white p-6 rounded-lg shadow-md flex justify-between items-center">
+          <div>
+            <p class="text-sm opacity-80">This Week</p>
+            <p class="text-2xl font-bold">Mood Improved</p>
+            <p class="text-sm opacity-80">+0.3 points from last week</p>
+          </div>
+          <span class="material-icons text-4xl">trending_up</span>
+        </div>
+        <div class="bg-blue-600 text-white p-6 rounded-lg shadow-md flex justify-between items-center">
+          <div>
+            <p class="text-sm opacity-80">Stress Levels</p>
+            <p class="text-2xl font-bold">Reduced 15%</p>
+            <p class="text-sm opacity-80">Great progress this month!</p>
+          </div>
+          <span class="material-icons text-4xl">favorite_border</span>
+        </div>
+        <div class="bg-purple-600 text-white p-6 rounded-lg shadow-md flex justify-between items-center">
+          <div>
+            <p class="text-sm opacity-80">Activities</p>
+            <p class="text-2xl font-bold">78% Complete</p>
+            <p class="text-sm opacity-80">11 of 14 this week</p>
+          </div>
+          <span class="material-icons text-4xl">psychology</span>
+        </div>
+        <div class="lg:col-span-2 bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+            <h2 class="text-lg font-semibold flex items-center mb-2 sm:mb-0">
+              <span class="material-icons mr-2 text-blue-500">show_chart</span>
+              Mood Trends Over Time
+            </h2>
+            <div class="flex items-center space-x-2 text-sm">
+              <button
+                class="px-3 py-1 rounded-md bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 font-medium">Daily</button>
+              <button class="px-3 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Weekly</button>
+              <button class="px-3 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Monthly</button>
+            </div>
+          </div>
+          <div class="h-80 relative">
+            <div class="h-full w-full flex flex-col justify-between absolute left-0 top-0 pl-8">
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+            </div>
+            <svg class="absolute inset-0 w-full h-full pl-8" preserveAspectRatio="none" viewBox="0 0 300 200">
+              <path d="M0 80 C 20 100, 40 60, 60 80 S 100 0, 120 20 S 160 70, 180 50 S 220 10, 240 30 S 280 80, 300 70"
+                fill="none" stroke="#60A5FA" stroke-width="2"></path>
+              <g class="group" transform="translate(60, 80)">
+                <circle class="cursor-pointer" cx="0" cy="0" fill="#60A5FA" r="4"></circle>
+                <foreignObject class="tooltip opacity-0 transform -translate-y-2 transition-all duration-200"
+                  height="40" width="80" x="-40" y="-50">
+                  <div class="bg-gray-800 text-white text-xs rounded-md p-2 text-center shadow-lg">Mood: 6/10<br /> Mon
+                  </div>
+                </foreignObject>
+              </g>
+              <g class="group" transform="translate(120, 20)">
+                <circle class="cursor-pointer" cx="0" cy="0" fill="#60A5FA" r="4"></circle>
+                <foreignObject class="tooltip opacity-0 transform -translate-y-2 transition-all duration-200"
+                  height="40" width="80" x="-40" y="-50">
+                  <div class="bg-gray-800 text-white text-xs rounded-md p-2 text-center shadow-lg">Mood: 9/10<br /> Tue
+                  </div>
+                </foreignObject>
+              </g>
+              <g class="group" transform="translate(180, 50)">
+                <circle class="cursor-pointer" cx="0" cy="0" fill="#FBBF24" r="4"></circle>
+                <foreignObject class="tooltip opacity-0 transform -translate-y-2 transition-all duration-200"
+                  height="40" width="80" x="-40" y="-50">
+                  <div class="bg-gray-800 text-white text-xs rounded-md p-2 text-center shadow-lg">Mood: 7.5/10<br />
+                    Wed
+                  </div>
+                </foreignObject>
+              </g>
+              <g class="group" transform="translate(240, 30)">
+                <circle class="cursor-pointer" cx="0" cy="0" fill="#34D399" r="4"></circle>
+                <foreignObject class="tooltip opacity-0 transform -translate-y-2 transition-all duration-200"
+                  height="40" width="80" x="-40" y="-50">
+                  <div class="bg-gray-800 text-white text-xs rounded-md p-2 text-center shadow-lg">Mood: 8.5/10<br />
+                    Thu
+                  </div>
+                </foreignObject>
+              </g>
+            </svg>
+            <div
+              class="absolute -bottom-6 w-full flex justify-between text-xs text-subtext-light dark:text-subtext-dark pl-10 pr-4">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+            <div
+              class="absolute left-0 h-full flex flex-col justify-between text-xs text-subtext-light dark:text-subtext-dark text-right pr-2">
+              <span class="block -translate-y-1/2">10</span><span class="block -translate-y-1/2">7.5</span><span
+                class="block -translate-y-1/2">5</span><span class="block -translate-y-1/2">2.5</span><span
+                class="block -translate-y-1/2">0</span>
+            </div>
+          </div>
+          <p class="text-sm text-subtext-light dark:text-subtext-dark mt-8 flex items-start">
+            <span class="material-icons text-yellow-500 mr-2 text-base">lightbulb</span>
+            Your mood fluctuated this week, with a high on Tuesday. Keep logging to see more patterns!
+          </p>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+            <h2 class="text-lg font-semibold flex items-center mb-2 sm:mb-0">
+              <span class="material-icons mr-2 text-green-500">bar_chart</span>
+              Stress &amp; Anxiety
+            </h2>
+            <div class="flex items-center space-x-2 text-sm">
+              <button
+                class="px-3 py-1 rounded-md bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-300 font-medium">Weekly</button>
+              <button class="px-3 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">Monthly</button>
+            </div>
+          </div>
+          <div class="h-80 relative">
+            <div
+              class="absolute left-0 h-full flex flex-col justify-between text-xs text-subtext-light dark:text-subtext-dark text-right pr-2">
+              <span class="block -translate-y-1/2">10</span><span class="block -translate-y-1/2">8</span><span
+                class="block -translate-y-1/2">6</span><span class="block -translate-y-1/2">4</span><span
+                class="block -translate-y-1/2">2</span><span class="block -translate-y-1/2">0</span>
+            </div>
+            <div class="h-full w-full flex flex-col justify-between absolute left-0 top-0 pl-8">
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+              <div class="h-px bg-gray-200 dark:bg-gray-700"></div>
+            </div>
+            <svg class="absolute inset-0 w-full h-full pl-8" preserveAspectRatio="none" viewBox="0 0 300 200">
+              <path d="M0 100 C 25 120, 50 80, 75 100 S 125 40, 150 60 S 200 140, 225 120 S 275 20, 300 40" fill="none"
+                stroke="var(--chart-1)" stroke-width="2"></path>
+              <path d="M0 140 C 25 160, 50 120, 75 140 S 125 80, 150 100 S 200 60, 225 80 S 275 160, 300 180"
+                fill="none" stroke="var(--chart-2)" stroke-dasharray="4 2" stroke-width="2"></path>
+            </svg>
+            <div
+              class="absolute -bottom-6 w-full flex justify-between text-xs text-subtext-light dark:text-subtext-dark pl-12 pr-4">
+              <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+          </div>
+          <div class="flex justify-center space-x-4 mt-8 text-sm">
+            <div class="flex items-center"><span class="w-4 h-0.5 bg-[var(--chart-1)] mr-2"></span>Stress</div>
+            <div class="flex items-center"><svg class="w-4 h-2 mr-2" viewBox="0 0 16 8">
+                <path d="M0 4 H4 M8 4 H12" stroke="var(--chart-2)" stroke-dasharray="4 2" stroke-width="2"></path>
+              </svg>Anxiety</div>
+          </div>
+          <p class="text-sm text-subtext-light dark:text-subtext-dark mt-4 flex items-start">
+            <span class="material-icons text-yellow-500 mr-2 text-base">lightbulb</span>
+            Your stress and anxiety levels appear to follow a similar pattern. Identifying triggers on high-stress days
+            might be helpful.
+          </p>
+        </div>
+        <div class="lg:col-span-2 bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md">
+          <h2 class="text-lg font-semibold flex items-center mb-4">
+            <span class="material-icons mr-2 text-red-400">favorite</span>
+            Wellness Activities Progress
+          </h2>
+          <div class="flex items-center justify-center my-8">
+            <div class="relative w-48 h-48">
+              <svg class="w-full h-full" viewBox="0 0 36 36">
+                <path class="text-gray-200 dark:text-gray-600" d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3"></path>
+                <path class="text-teal-500" d="M18 2.0845
+                          a 15.9155 15.9155 0 0 1 0 31.831
+                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="78, 100"
+                  stroke-linecap="round" stroke-width="3"></path>
+              </svg>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <span class="text-3xl font-bold text-teal-500">78%</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between items-center mb-1 text-sm">
+                <p>Meditation Sessions</p>
+                <p class="text-subtext-light dark:text-subtext-dark">8/10</p>
+              </div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="bg-gray-600 dark:bg-gray-400 h-2.5 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1 text-sm">
+                <p>Journal Entries</p>
+                <p class="text-subtext-light dark:text-subtext-dark">5/7</p>
+              </div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="bg-gray-600 dark:bg-gray-400 h-2.5 rounded-full" style="width: 71.4%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1 text-sm">
+                <p>Exercise Minutes</p>
+                <p class="text-subtext-light dark:text-subtext-dark">180/240</p>
+              </div>
+              <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                <div class="bg-gray-600 dark:bg-gray-400 h-2.5 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md">
+          <h2 class="text-lg font-semibold mb-4">Weekly Insights</h2>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-green-100 dark:bg-green-900 p-2 rounded-full mr-4">
+                <span class="material-icons text-green-500">celebration</span>
+              </div>
+              <div>
+                <p class="font-semibold text-green-600 dark:text-green-400">Great progress!</p>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark">Your mood has improved consistently over
+                  the
+                  past month. Your meditation practice seems to be really helping.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full mr-4">
+                <span class="material-icons text-blue-500">bed</span>
+              </div>
+              <div>
+                <p class="font-semibold text-blue-600 dark:text-blue-400">Sleep insight:</p>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark">Your mood scores are highest on days when
+                  you
+                  get 7+ hours of sleep. Try maintaining a consistent bedtime.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="bg-purple-100 dark:bg-purple-900 p-2 rounded-full mr-4">
+                <span class="material-icons text-purple-500">school</span>
+              </div>
+              <div>
+                <p class="font-semibold text-purple-600 dark:text-purple-400">Study tip:</p>
+                <p class="text-sm text-subtext-light dark:text-subtext-dark">Break study sessions into 25-minute chunks
+                  to
+                  help reduce academic stress levels.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

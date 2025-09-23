@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindfulU</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13c8ec",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101f22",
+              "text-light": "#0d191b",
+              "text-dark": "#e0f2f5",
+              "subtle-light": "#4c8d9a",
+              "subtle-dark": "#88c1cc",
+              "border-light": "#e7f1f3",
+              "border-dark": "#2a3f44"
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="border-b border-border-light dark:border-border-dark">
+<div class="container mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+<h1 class="text-xl font-bold">MindfulU</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Chat</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Booking</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Resources</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Peer Support</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Analytics</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCzJi96T4Lcmoli5xG0ifm94uV_hdx8Q9AjO3u1V5smnmDhEDFuPj1EMQsaUoikNUewPvALuzLhvzq-Ptjy8BTyLWzEqzTsuD4bzhqvfsQ0Wiaw_lUxpvqplwKHK6LAD2Psj2cIFXCWrJ7eESZ3GaHaUhFBqyjNdL4az5MbClza1mQg7VVmS0wpPgCg30TXl0AjPWPGoCgvaaOD3sEm6GDMUb7YACZ3j2ZUw14kCnW5kP5uKSaJtPLrvDlglEtLCx37nHo4bNylisJ4");'></div>
+<button class="md:hidden">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-6 py-12">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div class="flex flex-col gap-6 text-center lg:text-left">
+<h1 class="text-4xl md:text-5xl font-black tracking-tighter leading-tight">Your Mental Wellness Journey Starts Here</h1>
+<p class="text-base text-subtle-light dark:text-subtle-dark">At MindfulU, we believe in fostering a supportive environment where students can prioritize their mental health. Our platform offers a range of resources and tools designed to help you navigate the challenges of academic life and beyond.</p>
+<div class="mt-2">
+<button class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity text-base">Explore Resources</button>
+</div>
+</div>
+<div class="w-full h-80 lg:h-auto lg:aspect-square rounded-xl bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcg_NpJhWQWabWIoUrRekPTHdK12fwRkOXeH0iOuCZ0nx_kJsIlR7-ULYzKvDbwr1OvgU8rouyH_OCl9masF-_6Kb4Z2l1_Nknd8f25F2ngC1EnBgDcIiStpGSVTN5OaWVjvMf9ued3KySysuu7MvYX0BLr4VvuYK7-F9Z_-bLWRTFnDtdifzadyE348qFu_13dl0iZwkAOzl_txiKI3Ki_SWYT7bFUk2lvgYWYLJxZjv9FHttKiqjw7IBEwW-z5exDnSW3cORV2TY");'></div>
+</div>
+<div class="mt-24">
+<h2 class="text-3xl font-bold text-center">Quick Access</h2>
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-lg flex flex-col gap-3 group hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAgFdSznCrx9rmn6HcaO_H9KoIm-qJdsRAoun2b97jJ-vryuaI_mN507a8UVq1ozAKjRoIZnGVHzme2V9q4sGoRAD4wKOIGLXkJe38SnfgE-XkP0T5dU6MuJKUPQcmnMo5DRqKegt-LLr9JxBQMGvGswhNEFU6fOH6Ih5I5m4upScakbBgSL-Gu0C3IoWU89k_WPC9Wo5YX3wMsMvpTSFWRB0uGiXYiL50hATlA0Uh75x7xONM3xFch3W20tSc5zMR6VhslWpr9Iy7");'></div>
+<div>
+<h3 class="font-semibold">Chat</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Connect with a mental health professional instantly.</p>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-lg flex flex-col gap-3 group hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVw2AUvxyjxIenKjzgXqWFg_XzTgyq9NMs6DbRzG-yVdNSO4iQF9sCkYEpiS44D7GGtNvPyTiq5I_kEUC6vMp_c6qWjlOqGm6mmGLeBBVU50_34SprDMDylLM_IVdt3q2p2Mw35e6Csx_jyhKAuDmkHpPaHnLnPSUuHbMnSlMPgJ2OM7bHsl9SQVunoHvO7QCApq5npftkh5_RrAPGBVKKdQIJeWXmpXD1Myyjukf4PoqdwBERC4o48XK7V-AlbKZWhbeobAvlFOZG");'></div>
+<div>
+<h3 class="font-semibold">Booking</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Schedule a session with a counselor at your convenience.</p>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-lg flex flex-col gap-3 group hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9yxCXFcPW7PjZ4-vlfBKi4F8a3q6l2WUY-7bZ4GIGtAdUttaXn4-NWBZqrbhRNW-BxcvaZ6K4IwzuYqCPNUxLWqkqHHH0k4DWo1Gwrf2OkUsbnKumpDBFxv9DTP-vBRcQxxBsQjnauvT7lCM3wVwGaPy7xfN_DoLhiSc2qAC-cM0XuaWH5bOIUC9keNv46_w23fX-grrEemphZWYTK-VxBPA9Wu3L0E5SuhclS-an6eBXKeF3RBl_jlhRULi0SGYiPzWqKC4Adeik");'></div>
+<div>
+<h3 class="font-semibold">Resources</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Access a library of articles, videos, and exercises.</p>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-lg flex flex-col gap-3 group hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNAjyrUxONLXBKXrFxmSv36B3jE9-yfXZqCnBjf-izVIKYjI4MIRpWpK7NXPIpktZBpsSydANLPGUSO5t2oL0fhsuZHsvCVlWxCPikCo0fqXNyWJMZ0myAuqEydooO3-sKgZBs4kOosR7leTn3AjVcGxsrkMrlCjIfAi075lpsDmLCbT4BzFuQLiAnRUygZ6kzyspwilinejOpRPhkODpxU82lX__yAWBVApyoMqvvHx3pq1tGgOINK7F-15kmqfNiIoY8OgUOHgIy");'></div>
+<div>
+<h3 class="font-semibold">Peer Support</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Find support and share experiences with fellow students.</p>
+</div>
+</div>
+<div class="bg-primary/5 dark:bg-primary/10 p-4 rounded-lg flex flex-col gap-3 group hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="w-full aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSxTT5sstrzjmxEH8wzlyjju2TsMeMQ9ZAvoT6aRenEBUiatP7Sz7u2y-FDdIJ0LPdjLa1OExseQ8NxGCP5WybBw8TOCdP9A-AzUsnPcMywBv33igXomyCsZ4YvTaoc8XvD51caVpi1HVK2RZabrsZECqGur2vxotBuUzOX2zwiKXrgKoONi2KBPWtWDFZmkTGeA1WZ_z_BoRCnmOakdKW-IT56HHLcIlPi-Pt2IJixF4FW7yrjpt63fyBNtBQd8Yhpn_PB5Q108Rh");'></div>
+<div>
+<h3 class="font-semibold">Analytics</h3>
+<p class="text-sm text-subtle-light dark:text-subtle-dark">Track your progress and gain insights into your well-being.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
