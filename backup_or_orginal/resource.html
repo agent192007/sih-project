@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MindfulU</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102222",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-black dark:text-white">
+<div class="flex flex-col min-h-screen">
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-xl font-bold text-black dark:text-white" href="#">
+<span class="material-symbols-outlined text-primary text-3xl">psychology</span>
+                            MindfulU
+                        </a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-black dark:text-white hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-primary" href="#">Resources</a>
+<a class="text-sm font-medium text-black dark:text-white hover:text-primary transition-colors" href="#">Community</a>
+<a class="text-sm font-medium text-black dark:text-white hover:text-primary transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full text-black dark:text-white hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSP8b2nH84umCunK6ncQaNmcSWQKwWYq95oYUMcNmyPWzXs2ySw4HKy_rpqlsihG-hmm09Mo16mbz2OL8IdLTE8fzcgAQ5iiE1gfdXSCRegp-xWDiAa3eo8ekAWWC4xz7zrABWxjxweYxKxbJ6z-EuW2qhdIz7dH9VQC1d9s6it7kNnXb0VohbBKVHl_8K3N6No7Sl3t2YgL7iT9Lsa7DzSZIFsW3EQIrxvlopwvrGStP_5nygOBRtuxrvz-oplz7UMyjg7WJlOVI");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-bold tracking-tight text-black dark:text-white mb-4">Mental Health Resources</h1>
+<p class="text-lg text-black/60 dark:text-white/60">Explore a variety of resources to support your mental well-being.</p>
+</div>
+<div class="mb-8">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-black/40 dark:text-white/40">search</span>
+<input class="w-full h-12 pl-12 pr-4 rounded-lg bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 focus:ring-2 focus:ring-primary focus:outline-none transition-shadow" placeholder="Search resources..." type="text"/>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-2 mb-12">
+<button class="px-4 py-2 rounded-full text-sm font-medium bg-primary text-black">All</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">Blogs</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">Podcasts</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">Videos</button>
+<button class="px-4 py-2 rounded-full text-sm font-medium bg-primary/20 dark:bg-primary/30 text-black dark:text-white hover:bg-primary/40 dark:hover:bg-primary/50 transition-colors">Books</button>
+</div>
+<div class="space-y-12">
+<section>
+<h2 class="text-2xl font-bold mb-6 text-black dark:text-white">Featured Blogs</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden group">
+<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeoOT3ZmpyVpjdC77j5YukYY_uj0Zq-oLCn33upEQI1Sh7eeKCOUpobgnGsDEMCcTclopzS8NQcUVonhTMu8zDdwubYGr5qNxva9dBfEQwer9DgXHAC7qFrQKxKSSa38_jblOhpd3y2ol_61v4yL9-WUrPVykpRAVkrR-bRSij32FriYr-QigtRvHTpET2OiYKh8JmDDIf5ZhtFZ_LThgUFo9_nZlZ-WKMmEAza-RuTEIku3UdxWP5L-EBB9vxdWQENMjWFeRNVyk");'></div>
+<div class="p-6">
+<p class="text-sm text-primary font-medium mb-1">Blog</p>
+<h3 class="text-lg font-bold mb-2 text-black dark:text-white">Understanding Stress and Anxiety</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-4">Learn about the common causes of stress and anxiety and effective coping strategies.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline" href="#">Read More <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden group">
+<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoy-qRe8UOQ74rS5RXm-1RMoWmkdtroSRRBN3A4AbwscIFfwIspB4yPOutiH7CTRcK_bnEe7P5EymCARdaEsTxiKpNjL4NcKKjSR8oE5DzGSt_iRobEXSOAGV6nScyPu9KXb_TTLYM34FoeCC-o8NOf2FHMrfITCekqVsRZsLM8e7pHYLcvNAt0vSQeFn4_HJDNJb6MRhTB5gMPtxk-Te2e9D8mhE9xNz56wwmneulxgUoHwNcqxuJamPCS7gO4yKPM-2BdXFU1bQ");'></div>
+<div class="p-6">
+<p class="text-sm text-primary font-medium mb-1">Blog</p>
+<h3 class="text-lg font-bold mb-2 text-black dark:text-white">Building Resilience in Challenging Times</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-4">Discover how to build resilience and maintain a positive outlook during difficult periods.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline" href="#">Read More <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-6 text-black dark:text-white">Recommended Podcasts</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden group">
+<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbN_AdE3zeBjrL2HP8Qd1RVcbZaNu30l4Fv-zp1BOvy9-MPyLsgg-u1ykbk9sMDfpyuZz7IHSJryFF-J0UJTJ_ArwUH9BTXw_K7Oi2VF7JXcs3BX5rLvyRZFqpMJbdub811wWuOHOYTcIlRi95-3wJPYG-s3ouP54xYPislbQXT0YF3VSbon4Y4-rf_fvyZgPxY6LiHMMNrTT7IsLsZc4gnc-hoVTYKdtPylORhHu3WhBy_WCBv1_0oZ4ojvv26qcpBQqQ31ET7XU");'></div>
+<div class="p-6">
+<p class="text-sm text-primary font-medium mb-1">Podcast</p>
+<h3 class="text-lg font-bold mb-2 text-black dark:text-white">Mindfulness for Daily Life</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-4">A podcast series on incorporating mindfulness practices into your daily routine.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline" href="#">Listen Now <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden group">
+<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1GcAbJKLiceKu2rIIuNW3uPV2-zCTSlgxWeTX0ASa-LhEIhQ-wbG1n946Qg97LTMMSKr0L0bdXiEmSOu_G2_3JSRm8jRYv3fdVOaCdpaDmNfYeQ-_l_HEPXc4VHA5JAf6X1UjykSPFUNVfXIjN2tCxhTlh2WwgzxcE5XkBpTMfsW27abdeW1EFiqiy93TgFA77_PoCbD-8iPaEl2f7e89RmWJSeBYWN3tIMy_n9ZsGoXW-OxAU_qtMIe47GxsZWa4ZKeImOM_tME");'></div>
+<div class="p-6">
+<p class="text-sm text-primary font-medium mb-1">Podcast</p>
+<h3 class="text-lg font-bold mb-2 text-black dark:text-white">The Power of Positive Thinking</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-4">Explore the benefits of positive thinking and how it can impact your mental health.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline" href="#">Listen Now <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-6 text-black dark:text-white">Helpful Videos</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden group">
+<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBx8vv5dxdehoA1kdGTcUtttmuP3L5tOURu_fgwr6bkgsDWm-Be10Zoz648Q1NGjl19Sn748TXox02b5FjBX09OdnCsjY3mf14SHAxkAIPcTlKpsQZzZUpt2HamPUfCF6ocC3xmimVvjoEz4353c9wTLCnTEQ2X1UdBmP4yQ97qzgXqHeLAWJzqcMzJG4C6Hpi0cMlAYUrkRMs8yDhIxISR-_eiVO0Dq5FEVQNI7n4kE7G5c_5WFMWePV2n4VDrOH5jtpxmXR4kPu8");'></div>
+<div class="p-6">
+<p class="text-sm text-primary font-medium mb-1">Video</p>
+<h3 class="text-lg font-bold mb-2 text-black dark:text-white">Guided Meditation for Relaxation</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-4">A guided meditation video to help you relax and reduce stress.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline" href="#">Watch Now <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-xl overflow-hidden group">
+<div class="w-full h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnDntaJNJOD6zNfF2sJGjhnZmT1FvmDybUEg58KIrHEGLEWrulso-PA_XcwGpDwkZIyoy7BVt0dsqfbppBv3WPxyw6zGKDm-fI3aPd_HwOHERyGbCJfp0e57QHXscsge3xc0WTYlTzQ3sATxPKgeNyuMBSiFlJHbPyF0YXgOcGX33feCXi5_iStQHU5cR4qYy9PaDRDx66-zNNGSiYWjv2fwsM_fSAxhl4vNWxMDLNx69hdCfqsk5LnvnB6fv_sUC_aZJXjiaEObI");'></div>
+<div class="p-6">
+<p class="text-sm text-primary font-medium mb-1">Video</p>
+<h3 class="text-lg font-bold mb-2 text-black dark:text-white">Tips for Better Sleep</h3>
+<p class="text-sm text-black/60 dark:text-white/60 mb-4">Learn practical tips to improve your sleep quality and overall well-being.</p>
+<a class="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:underline" href="#">Watch Now <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        display: ["Inter"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                },
+            },
+        };
+    </script>
+    <title>Unwind</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="fixed top-0 left-0 w-full bg-background-light dark:bg-background-dark z-50 shadow-md">
+                <div class="flex justify-between items-center px-6 py-4">
+          
+                  <div class="flex items-center space-x-2">
+                    <img src="assets/logo.png" alt="Unwind Logo" class="w-10 h-10 object-contain" />
+                    <h1 class="text-xl font-bold text-text-light dark:text-text-dark">Unwind</h1>
+                  </div>
+          
+                  <nav class="flex space-x-6 items-center">
+                    <a href="home final.html">
+                      <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Home</button>
+                    </a>
+                    <a href="Dashboard final.html">
+                      <button
+                        class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Dashboard</button>
+                    </a>
+                    <a href="Peer Support Community final.html">
+                      <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">Peer
+                        Support</button>
+                    </a>
+                    <a href="Chatbot final.html">
+                      <button class="text-sm font-medium h-10 flex items-center justify-center hover:text-primary">AI
+                        Chatbot</button>
+                    </a>
+                    <a href="Accountinfo final.html"><button class="flex items-center justify-center h-10 text-sm font-medium hover:text-primary">
+                        <span class="material-icons text-4xl">account_circle</span>
+                    </button></a>
+                  </nav>
+                </div>
+              </header>
+              <div class="pt-20 p-8">
+
+            <main class="flex flex-1 justify-center px-4 py-8 sm:px-6 lg:px-8">
+                <div class="w-full max-w-2xl">
+                    <h1 class="text-3xl font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">Account Settings</h1>
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">Manage your profile, preferences, and
+                        privacy to ensure a safe and confidential experience. Your wellbeing is our priority, and your
+                        data is protected.</p>
+                    <div
+                        class="mt-8 bg-white dark:bg-zinc-900/50 rounded-lg shadow-sm border border-zinc-200 dark:border-zinc-800">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50">Profile Information</h3>
+                            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">This information helps us
+                                personalize your experience. Your name and email will not be shared with other users.
+                            </p>
+                            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                                        for="first-name">First Name</label>
+                                    <input
+                                        class="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                                        id="first-name" type="text" placeholder="Enter Firstname" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                                        for="last-name">Last Name</label>
+                                    <input
+                                        class="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                                        id="last-name" type="text" placeholder="Enter Lastname" />
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                                        for="email">Email Address</label>
+                                    <input
+                                        class="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                                        id="email" type="email" placeholder="Enter email address" />
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                                        for="pronouns">Pronouns (Optional)</label>
+                                    <input
+                                        class="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                                        id="pronouns" placeholder="e.g., she/her, they/them" type="text" />
+                                    <p class="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Sharing your pronouns helps
+                                        create an inclusive environment.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border-t border-zinc-200 dark:border-zinc-800 p-6">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50">Language Preference</h3>
+                            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Select the language for the
+                                application interface.</p>
+                            <div class="mt-4 flex flex-wrap gap-3">
+                                <label class="relative cursor-pointer">
+                                    <input checked="" class="peer sr-only" name="language" type="radio" />
+                                    <span
+                                        class="flex items-center justify-center rounded h-10 px-4 text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 ring-2 ring-transparent peer-checked:ring-primary peer-checked:text-primary peer-checked:bg-primary/10 dark:peer-checked:bg-primary/20 transition-all">
+                                        English </span>
+                                </label>
+                                <label class="relative cursor-pointer">
+                                    <input class="peer sr-only" name="language" type="radio" />
+                                    <span
+                                        class="flex items-center justify-center rounded h-10 px-4 text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 ring-2 ring-transparent peer-checked:ring-primary peer-checked:text-primary peer-checked:bg-primary/10 dark:peer-checked:bg-primary/20 transition-all">
+                                        Hindi </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="border-t border-zinc-200 dark:border-zinc-800 p-6">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50">Notification Settings</h3>
+                            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Choose how you receive
+                                communications from us. We respect your peace and won't spam you.</p>
+                            <div class="mt-4 space-y-4">
+                                <label class="flex items-start gap-x-3">
+                                    <input checked=""
+                                        class="h-5 w-5 rounded border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark mt-0.5"
+                                        type="checkbox" />
+                                    <div>
+                                        <span class="text-base text-zinc-800 dark:text-zinc-200">Email
+                                            Notifications</span>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Receive summaries,
+                                            appointment reminders, and important updates via email.</p>
+                                    </div>
+                                </label>
+                                <label class="flex items-start gap-x-3">
+                                    <input
+                                        class="h-5 w-5 rounded border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark mt-0.5"
+                                        type="checkbox" />
+                                    <div>
+                                        <span class="text-base text-zinc-800 dark:text-zinc-200">In-App
+                                            Notifications</span>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Get gentle nudges and alerts
+                                            for new messages or resources directly within the app.</p>
+                                    </div>
+                                </label>
+                                <label class="flex items-start gap-x-3">
+                                    <input
+                                        class="h-5 w-5 rounded border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark mt-0.5"
+                                        type="checkbox" />
+                                    <div>
+                                        <span class="text-base text-zinc-800 dark:text-zinc-200">Weekly Wellness
+                                            Digest</span>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">A weekly email with curated
+                                            content and tips for your mental wellbeing journey.</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="border-t border-zinc-200 dark:border-zinc-800 p-6">
+                            <h3 class="text-lg font-bold text-zinc-900 dark:text-zinc-50">Privacy &amp; Confidentiality
+                            </h3>
+                            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Your privacy is paramount. These
+                                settings give you control over your visibility on the platform.</p>
+                            <div class="mt-4 space-y-4">
+                                <label class="flex items-start gap-x-3">
+                                    <input
+                                        class="h-5 w-5 rounded border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark mt-0.5"
+                                        type="checkbox" />
+                                    <div>
+                                        <span class="text-base text-zinc-800 dark:text-zinc-200">Anonymous Mode</span>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Engage in community
+                                            discussions without revealing your profile information. A random alias will
+                                            be used.</p>
+                                    </div>
+                                </label>
+                                <label class="flex items-start gap-x-3">
+                                    <input checked=""
+                                        class="h-5 w-5 rounded border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark mt-0.5"
+                                        type="checkbox" />
+                                    <div>
+                                        <span class="text-base text-zinc-800 dark:text-zinc-200">Private Profile</span>
+                                        <p class="text-sm text-zinc-500 dark:text-zinc-400">Only counselors and platform
+                                            administrators can view your full profile.</p>
+                                    </div>
+                                </label>
+                                <div>
+                                    <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                                        for="data-sharing">Data &amp; Research Consent</label>
+                                    <select
+                                        class="mt-1 block w-full rounded-md border-zinc-300 dark:border-zinc-700 bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 shadow-sm focus:border-primary focus:ring-primary sm:text-sm"
+                                        id="data-sharing">
+                                        <option>Allow anonymized data for research</option>
+                                        <option>Do not use my data for research</option>
+                                    </select>
+                                    <p class="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Help improve mental health
+                                        services by allowing us to use your anonymized, non-identifiable data for
+                                        research. <a class="text-primary hover:underline" href="#">Learn more</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="border-t border-zinc-200 dark:border-zinc-800 p-6 flex flex-col sm:flex-row justify-end gap-3">
+                            <button
+                                class="flex min-w-[84px] items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 text-sm font-bold hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+                                <span class="truncate">Logout</span>
+                            </button>
+                            <button
+                                class="flex min-w-[84px] items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">
+                                <span class="truncate">Save All Changes</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
